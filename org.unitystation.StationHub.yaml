@@ -1,5 +1,5 @@
 app-id: org.unitystation.StationHub
-runtime: org.freedesktop.Sdk
+runtime: org.freedesktop.Platform
 runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 command: stationhub.sh
@@ -43,6 +43,7 @@ modules:
     build-commands:
       - '. /usr/lib/sdk/dotnet/enable.sh; dotnet publish -c Release ./UnitystationLauncher/UnitystationLauncher.csproj /p:DefineConstants="FLATPAK"'
       - cp -R UnitystationLauncher/bin/Release/netcoreapp3.1/ /app/org.unitystation.StationHub
+      - cp -R /usr/lib/sdk/dotnet /app/dotnet
       - install -D stationhub.sh /app/bin/stationhub.sh
       - install -D  UnitystationLauncher/Assets/org.unitystation.StationHub.desktop /app/share/applications/org.unitystation.StationHub.desktop
       - install -D  UnitystationLauncher/Assets/Ian64.png /app/share/icons/hicolor/64x64/apps/org.unitystation.StationHub.png
