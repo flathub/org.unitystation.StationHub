@@ -8,6 +8,7 @@ sdk-extensions:
 finish-args:
   - --socket=x11
   - --share=ipc
+  - --device=dri
   - --socket=pulseaudio
   - --share=network
 modules:
