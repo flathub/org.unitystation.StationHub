@@ -9,7 +9,6 @@ finish-args:
   - --socket=x11
   - --share=ipc
   - --socket=pulseaudio
-  - --device=all
   - --share=network
 modules:
   - name: iputils
