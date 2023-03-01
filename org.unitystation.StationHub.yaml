@@ -30,8 +30,6 @@ modules:
         commit: 28856113558903e165fabc8b071b4111924acb7e
       - type: file
         path: nuget.config
-      - type: file
-        path: stationhub.sh
       - sources.json
     buildsystem: simple
     build-options:
