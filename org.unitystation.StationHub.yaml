@@ -27,7 +27,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/unitystation/stationhub
-        commit: 28856113558903e165fabc8b071b4111924acb7e
+        commit: 45f68bef1e83e004262534e52c8c4f7119fc89b6
       - type: file
         path: nuget.config
       - sources.json
