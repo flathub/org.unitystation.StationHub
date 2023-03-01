@@ -33,7 +33,7 @@ modules:
       - sources.json
     buildsystem: simple
     build-commands:
-      - '. /usr/lib/sdk/dotnet6/enable.sh; dotnet publish --framework net6.0 --runtime linux-x64 --configuration Release --self-contained true --property PublishDir=/app/bin ./UnitystationLauncher/UnitystationLauncher.csproj /p:DefineConstants="FLATPAK"'
+      - '. /usr/lib/sdk/dotnet6/enable.sh; dotnet publish --framework net6.0 --runtime linux-x64 --configuration Release --self-contained true --source ./nuget-sources --property PublishDir=/app/bin ./UnitystationLauncher/UnitystationLauncher.csproj /p:DefineConstants="FLATPAK"'
       - install -D UnitystationLauncher/Assets/org.unitystation.StationHub.desktop /app/share/applications/org.unitystation.StationHub.desktop
       - install -D UnitystationLauncher/Assets/Ian64.png /app/share/icons/hicolor/64x64/apps/org.unitystation.StationHub.png
       - install -D UnitystationLauncher/Assets/Ian128.png /app/share/icons/hicolor/128x128/apps/org.unitystation.StationHub.png
