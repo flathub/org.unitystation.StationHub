@@ -1,10 +1,10 @@
 app-id: org.unitystation.StationHub
 runtime: org.freedesktop.Platform
-runtime-version: '20.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
-command: stationhub.sh
+command: StationHub
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.dotnet
+  - org.freedesktop.Sdk.Extension.dotnet6
 finish-args:
   - --socket=x11
   - --share=ipc
@@ -17,37 +17,26 @@ modules:
     config-opts:
       - -DBUILD_ARPING=false
       - -DBUILD_CLOCKDIFF=false
-      - -DBUILD_NINFOD=false
-      - -DBUILD_RDISC=false
       - -DBUILD_TRACEPATH=false
-      - -DENABLE_RDISC_SERVER=false
     sources:
       - type: git
         url: https://github.com/iputils/iputils
-        tag: s20200821
-  - name: dotnet
-    buildsystem: simple
-    build-commands:
-    - /usr/lib/sdk/dotnet/install.sh
+        tag: 20221126
+        commit: 5ffabc4190cab975c7332645259e286a032e183b
   - name: StationHub
     sources:
       - type: git
-        url: https://github.com/Elijahrane/stationhub/
-        branch: develop
+        url: https://github.com/unitystation/stationhub
+        commit: 45f68bef1e83e004262534e52c8c4f7119fc89b6
       - type: file
         path: nuget.config
-      - type: file
-        path: stationhub.sh
       - sources.json
     buildsystem: simple
     build-commands:
-      - '. /usr/lib/sdk/dotnet/enable.sh; dotnet publish -c Release ./UnitystationLauncher/UnitystationLauncher.csproj /p:DefineConstants="FLATPAK"'
-      - cp -R UnitystationLauncher/bin/Release/netcoreapp3.1/ /app/org.unitystation.StationHub
-      - cp -R /usr/lib/sdk/dotnet /app/dotnet
-      - install -D stationhub.sh /app/bin/stationhub.sh
-      - install -D  UnitystationLauncher/Assets/org.unitystation.StationHub.desktop /app/share/applications/org.unitystation.StationHub.desktop
-      - install -D  UnitystationLauncher/Assets/Ian64.png /app/share/icons/hicolor/64x64/apps/org.unitystation.StationHub.png
-      - install -D  UnitystationLauncher/Assets/Ian128.png /app/share/icons/hicolor/128x128/apps/org.unitystation.StationHub.png
-      - install -D  UnitystationLauncher/Assets/Ian256.png /app/share/icons/hicolor/256x256/apps/org.unitystation.StationHub.png
-      - install -D  UnitystationLauncher/Assets/Ian512.png /app/share/icons/hicolor/512x512/apps/org.unitystation.StationHub.png
-      - install -D  UnitystationLauncher/Assets/org.unitystation.StationHub.metainfo.xml /app/share/metainfo/org.unitystation.StationHub.metainfo.xml
+      - '. /usr/lib/sdk/dotnet6/enable.sh; dotnet publish --framework net6.0 --runtime linux-x64 --configuration Release --self-contained true --source ./nuget-sources --property PublishDir=/app/bin ./UnitystationLauncher/UnitystationLauncher.csproj /p:DefineConstants="FLATPAK" /p:DisableBeauty=true'
+      - install -D UnitystationLauncher/Assets/org.unitystation.StationHub.desktop /app/share/applications/org.unitystation.StationHub.desktop
+      - install -D UnitystationLauncher/Assets/Ian64.png /app/share/icons/hicolor/64x64/apps/org.unitystation.StationHub.png
+      - install -D UnitystationLauncher/Assets/Ian128.png /app/share/icons/hicolor/128x128/apps/org.unitystation.StationHub.png
+      - install -D UnitystationLauncher/Assets/Ian256.png /app/share/icons/hicolor/256x256/apps/org.unitystation.StationHub.png
+      - install -D UnitystationLauncher/Assets/Ian512.png /app/share/icons/hicolor/512x512/apps/org.unitystation.StationHub.png
+      - install -D UnitystationLauncher/Assets/org.unitystation.StationHub.metainfo.xml /app/share/metainfo/org.unitystation.StationHub.metainfo.xml
