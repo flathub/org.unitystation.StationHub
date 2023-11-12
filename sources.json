@@ -1,17 +1,17 @@
 [
     {
         "type": "file",
-        "url": "https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.app.runtime.linux-x64/6.0.20/microsoft.aspnetcore.app.runtime.linux-x64.6.0.20.nupkg",
-        "sha512": "13f6558e2ec8bd7de05c0998451baf45045ccd4280d51e59ed87361e2641d1124b67a6011e6ea9cb14de4e29dd1631609b7adbd8999a9163c14098d83734e919",
+        "url": "https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.app.runtime.linux-x64/7.0.13/microsoft.aspnetcore.app.runtime.linux-x64.7.0.13.nupkg",
+        "sha512": "ac93e8195096e6a1b3e63f86669ede05a1e447294159fa51bd0a10335b0c31dbf59bec98ad2d14ae562fb97777a4cd349fba50ecae4f9042696b7efa0a075435",
         "dest": "nuget-sources",
-        "dest-filename": "microsoft.aspnetcore.app.runtime.linux-x64.6.0.20.nupkg"
+        "dest-filename": "microsoft.aspnetcore.app.runtime.linux-x64.7.0.13.nupkg"
     },
     {
         "type": "file",
-        "url": "https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.runtime.linux-x64/6.0.20/microsoft.netcore.app.runtime.linux-x64.6.0.20.nupkg",
-        "sha512": "2655aa595c76d130cfee0f3638424b2539c66188f7eef801dce1f0ced670dc6fd07db85f5477a985fb96a853a7347f75e61eca308b93384c24084f8b53d93a70",
+        "url": "https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.runtime.linux-x64/7.0.13/microsoft.netcore.app.runtime.linux-x64.7.0.13.nupkg",
+        "sha512": "1fd9d2c1aab28dd3a6c183adf7049ce9a515059226337077a3da5d86bee9d497b88e7d51d7af21fd6a7246e4cfbe72a807ac9cb451c97af0ad9491d31c15b45b",
         "dest": "nuget-sources",
-        "dest-filename": "microsoft.netcore.app.runtime.linux-x64.6.0.20.nupkg"
+        "dest-filename": "microsoft.netcore.app.runtime.linux-x64.7.0.13.nupkg"
     },
     {
         "type": "file",
@@ -603,6 +603,13 @@
     },
     {
         "type": "file",
+        "url": "https://api.nuget.org/v3-flatcontainer/microsoft.ilverification/8.0.0-preview.6.23329.7/microsoft.ilverification.8.0.0-preview.6.23329.7.nupkg",
+        "sha512": "357594ec54bf91e0138db7a700a663f6c19707dab1e5cc367296d471b7e2207e77f00565bfc13300decc45d055fa235c20085e6c06b30d5ddc3439048263e79a",
+        "dest": "nuget-sources",
+        "dest-filename": "microsoft.ilverification.8.0.0-preview.6.23329.7.nupkg"
+    },
+    {
+        "type": "file",
         "url": "https://api.nuget.org/v3-flatcontainer/microsoft.netcore.platforms/1.0.1/microsoft.netcore.platforms.1.0.1.nupkg",
         "sha512": "5f3622dafd8fe8f3406c7a7ee506a7363c9955b28819ae1f2b067c38eae7ab6e620eb63442929b967c94fc511e47a2b7547ab62b6f1aafe37daa222499c9bb19",
         "dest": "nuget-sources",
@@ -691,6 +698,13 @@
         "sha512": "3358d5e2663a2fe6826564367e801a7b7beb6437dea77167a9127a31b8632cc9e3cd47a9d7e909259ca2e758975f3c1d1b7c5207c18a74c2aa4ab43b1d484d3c",
         "dest": "nuget-sources",
         "dest-filename": "nulastudio.netcorebeauty.1.2.9.3.nupkg"
+    },
+    {
+        "type": "file",
+        "url": "https://api.nuget.org/v3-flatcontainer/pidgin/3.2.2/pidgin.3.2.2.nupkg",
+        "sha512": "cb1971dba0f890a500c50b2be10829ccbad396922469953dde91ddcf59231e016762e365c7dd111b1bf98e87633e6886a17a98f7641b7361c1f5098c3a7e7d85",
+        "dest": "nuget-sources",
+        "dest-filename": "pidgin.3.2.2.nupkg"
     },
     {
         "type": "file",
@@ -1065,6 +1079,13 @@
     },
     {
         "type": "file",
+        "url": "https://api.nuget.org/v3-flatcontainer/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg",
+        "sha512": "f084afc9395d74b4f252c47b7d0e378e676d6b8b6033a68636b648b58805e3772dd22ff1ded05d3c8c8553d2e7685b29b753fe1cbb5a333f018abe6422a3ebfa",
+        "dest": "nuget-sources",
+        "dest-filename": "system.collections.immutable.7.0.0.nupkg"
+    },
+    {
+        "type": "file",
         "url": "https://api.nuget.org/v3-flatcontainer/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg",
         "sha512": "7f5029507196abf9490bc3d913b26a6c0ded898ed99e06503b699b61f086d0995055552aaa654c032d1f32f03012e1badfd338ec42dd3fa3d0c5ce4e228ea2e8",
         "dest": "nuget-sources",
@@ -1251,6 +1272,13 @@
         "sha512": "f5227666edc6bb1da78b8a8e86a68e9bd647caa2ec6a1580c14a4a5e1fe5cfde3bdaf0d8c23dc210c405a55f83ceb6add1a9adab149dc065b38cfddc9b01ba20",
         "dest": "nuget-sources",
         "dest-filename": "system.reflection.metadata.1.6.0.nupkg"
+    },
+    {
+        "type": "file",
+        "url": "https://api.nuget.org/v3-flatcontainer/system.reflection.metadata/7.0.0/system.reflection.metadata.7.0.0.nupkg",
+        "sha512": "2d93c8ba1a78ceb90d25b7a3b82ae7c7f2452ad29f49ee8e1c60b2bcda19f8f6edf68689d42a586aef5faf9f1049fe5e8095ec9a4ab48a2cd2a950a8b7ec2c85",
+        "dest": "nuget-sources",
+        "dest-filename": "system.reflection.metadata.7.0.0.nupkg"
     },
     {
         "type": "file",
