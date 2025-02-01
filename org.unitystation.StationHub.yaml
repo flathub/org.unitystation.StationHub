@@ -1,10 +1,10 @@
 app-id: org.unitystation.StationHub
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: StationHub
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.dotnet6
+  - org.freedesktop.Sdk.Extension.dotnet8
 finish-args:
   - --socket=x11
   - --share=ipc
@@ -28,13 +28,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/unitystation/stationhub
-        commit: 5e9690d3510b116c0960e290d0809d912cd0167d
+        commit: 3df8c47242ac5f40fbe9603bc05b995ca07232d0
       - type: file
         path: nuget.config
       - sources.json
     buildsystem: simple
     build-commands:
-      - '. /usr/lib/sdk/dotnet6/enable.sh; dotnet publish --framework net6.0 --runtime linux-x64 --configuration Release --self-contained true --source ./nuget-sources --property PublishDir=/app/bin ./UnitystationLauncher/UnitystationLauncher.csproj /p:DisableBeauty=true'
+      - '. /usr/lib/sdk/dotnet8/enable.sh; dotnet publish --framework net8.0 --runtime linux-x64 --configuration Release --self-contained true --source ./nuget-sources --property PublishDir=/app/bin ./UnitystationLauncher/UnitystationLauncher.csproj /p:DisableBeauty=true'
       - install -D UnitystationLauncher/Assets/org.unitystation.StationHub.desktop /app/share/applications/org.unitystation.StationHub.desktop
       - install -D UnitystationLauncher/Assets/Ian64.png /app/share/icons/hicolor/64x64/apps/org.unitystation.StationHub.png
       - install -D UnitystationLauncher/Assets/Ian128.png /app/share/icons/hicolor/128x128/apps/org.unitystation.StationHub.png
