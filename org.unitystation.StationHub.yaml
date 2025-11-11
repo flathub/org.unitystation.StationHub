@@ -31,8 +31,7 @@ modules:
         tag: "939"
       - type: file
         path: nuget.config
-      - type: file
-        path: sources.json
+      - sources.json
     build-commands:
       - ". /usr/lib/sdk/dotnet8/enable.sh; dotnet publish --framework net8.0 --runtime linux-x64 --configuration Release --self-contained true --source ./nuget-sources --property PublishDir=/app/bin ./UnitystationLauncher/UnitystationLauncher.csproj /p:DisableBeauty=true"
       - install -D UnitystationLauncher/Assets/org.unitystation.StationHub.desktop /app/share/applications/org.unitystation.StationHub.desktop
